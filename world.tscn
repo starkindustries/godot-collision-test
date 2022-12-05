@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3]
+[gd_scene load_steps=9 format=3 uid="uid://dhbririn77d4r"]
 
 [ext_resource type="Texture2D" uid="uid://bekg28i4wyv3k" path="res://assets/grass.png" id="1_vx72o"]
 [ext_resource type="PackedScene" path="res://player/player.tscn" id="2_jps5o"]
@@ -94,7 +94,6 @@ layer_0/tile_data = PackedInt32Array(-2228274, 131072, 4, -2162738, 131072, 0, -
 
 [node name="Player" parent="." instance=ExtResource("2_jps5o")]
 position = Vector2(-10, 302)
-collision_mask = 0
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../../Camera2D")
