@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="FontFile" uid="uid://dfef1s42hs1p0" path="res://assets/8x8-pixel.ttf" id="1_up6kl"]
+
+[node name="Label" type="Label"]
+offset_left = -8.0
+offset_top = -16.0
+offset_right = 120.0
+offset_bottom = 7.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_up6kl")
+theme_override_font_sizes/font_size = 11
+text = "."

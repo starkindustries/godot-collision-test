@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Texture2D" uid="uid://cqyfjh0w1w2cv" path="res://assets/trees-stumps-bushes.png" id="1_juybc"]
+[ext_resource type="Script" path="res://log/log.gd" id="1_stp6m"]
+[ext_resource type="PackedScene" path="res://label.tscn" id="2_ax07s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ky7t0"]
+size = Vector2(16, 14)
+
+[node name="Log" type="Area2D"]
+script = ExtResource("1_stp6m")
+stop = null
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_ky7t0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_juybc")
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Label" parent="." instance=ExtResource("2_ax07s")]
+offset_left = -14.0
+offset_top = -3.0
+offset_right = 114.0
+offset_bottom = 11.0
+text = "A"
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

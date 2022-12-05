@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://bush/bush.gd" id="1_sf0aa"]
+[ext_resource type="Texture2D" uid="uid://cqyfjh0w1w2cv" path="res://assets/trees-stumps-bushes.png" id="1_xynf1"]
+[ext_resource type="PackedScene" path="res://label.tscn" id="3_ka07n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_euoy5"]
+size = Vector2(16, 16)
+
+[node name="Bush" type="StaticBody2D"]
+script = ExtResource("1_sf0aa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_euoy5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_xynf1")
+region_enabled = true
+region_rect = Rect2(16, 48, 16, 16)
+
+[node name="Label" parent="." instance=ExtResource("3_ka07n")]
